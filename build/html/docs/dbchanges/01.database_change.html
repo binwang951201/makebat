@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>在PC端科研助手基础上修改的内容 &mdash; 移动科研助手 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="系统配置" href="../systemconfig/index.html" />
+    <link rel="prev" title="数据库修改" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> 移动科研助手
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../guide.html">前言</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deploy/index.html">部署手册</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据库修改</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">在PC端科研助手基础上修改的内容</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">移动端搜索</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-type">移动端订阅来源 （source_type）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#agent-type">数据来源 （agent_type）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">同步订阅来源</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">移动端执行频率</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">过期时间</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../systemconfig/index.html">系统配置</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">移动科研助手</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">数据库修改</a> &raquo;</li>
+        
+      <li>在PC端科研助手基础上修改的内容</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/docs/dbchanges/01.database_change.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pc">
+<h1>在PC端科研助手基础上修改的内容<a class="headerlink" href="#pc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>移动端搜索<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>添加搜索流水来源标识、移动端:1、PC端:0</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span>  <span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">query_history</span> <span class="k">add</span> <span class="k">column</span> <span class="n">source_type</span> <span class="nb">int</span> <span class="k">default</span> <span class="mi">0</span><span class="p">;</span>
+</pre></div>
+</div>
+<blockquote>
+<div><ul class="simple">
+<li><p>新建表[query_history_status]，记录搜索流水检索状态</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">create</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">query_history_status</span>
+<span class="p">(</span>
+<span class="n">id</span> <span class="nb">bigint</span> <span class="k">not</span> <span class="k">null</span> <span class="k">primary</span> <span class="k">key</span> <span class="k">default</span> <span class="mi">0000</span><span class="p">,</span>
+<span class="n">query_userid</span> <span class="nb">integer</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="mi">1</span><span class="p">,</span>
+<span class="n">query_status</span> <span class="nb">integer</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="mi">0</span><span class="p">,</span>
+<span class="n">begin_datetime</span> <span class="k">timestamp</span> <span class="k">default</span> <span class="n">now</span><span class="p">(),</span>
+<span class="n">finsh_datetime</span> <span class="k">timestamp</span> <span class="k">default</span> <span class="n">now</span><span class="p">(),</span>
+<span class="n">is_deleted</span> <span class="nb">boolean</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="k">false</span>
+<span class="p">);</span>
+
+<span class="k">comment</span> <span class="k">on</span> <span class="k">column</span> <span class="n">ir</span><span class="p">.</span><span class="n">query_history_status</span><span class="p">.</span><span class="n">id</span> <span class="k">is</span> <span class="s1">&#39;搜索流水Id&#39;</span><span class="p">;</span>
+
+<span class="k">comment</span> <span class="k">on</span> <span class="k">column</span> <span class="n">ir</span><span class="p">.</span><span class="n">query_history_status</span><span class="p">.</span><span class="n">query_userid</span> <span class="k">is</span> <span class="s1">&#39;创建搜索流水用户Id&#39;</span><span class="p">;</span>
+
+<span class="k">comment</span> <span class="k">on</span> <span class="k">column</span> <span class="n">ir</span><span class="p">.</span><span class="n">query_history_status</span><span class="p">.</span><span class="n">query_status</span> <span class="k">is</span> <span class="s1">&#39;搜索流水执行状态&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="source-type">
+<h2>移动端订阅来源 （source_type）<a class="headerlink" href="#source-type" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>在ir.cohort_def 表中新增字段source_type 用于标识订阅来源  
+
+移动端订阅来源状态,移动端订阅使用，0代表未定义，1代表从查询新增，2代表自定义新增，3代表从PC端同步
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_def</span>
+  <span class="k">add</span> <span class="n">source_type</span> <span class="nb">integer</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="mi">0</span><span class="p">;</span>     
+</pre></div>
+</div>
+</div>
+<div class="section" id="agent-type">
+<h2>数据来源 （agent_type）<a class="headerlink" href="#agent-type" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>数据来源，移动端，PC端都使用，0代表未定义，1代表从PC端新增，2代表移动端新增
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_def</span>
+  <span class="k">add</span> <span class="n">agent_type</span> <span class="nb">integer</span> <span class="k">not</span> <span class="k">null</span> <span class="k">default</span> <span class="mi">1</span><span class="p">,</span> 
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>同步订阅来源<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>同步订阅来源Id，当该条订阅是从PC端同步过来的时候，标识，从那条记录同步过来的
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_def</span>
+  <span class="k">add</span> <span class="n">ays_cohort_id</span> <span class="nb">integer</span><span class="p">;</span>           
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>移动端订阅执行频率，hangfire,cron 表达式
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_def</span>
+  <span class="k">add</span> <span class="n">mobile_query_frequency</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">);</span>      
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>移动端执行频率<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>移动端订阅执行频率，hangfire,cron 表达式
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_def</span>
+  <span class="k">add</span> <span class="n">mobile_query_frequency</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">64</span><span class="p">);</span>      
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>过期时间<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>过期时间：当前时间大于过期时间之后，订阅中患者显示为“已过期；
+消失时间:当前时间大于消失时间之后，患者信息就会从订阅患者列表中消失。
+就诊Id: 保存符合订阅查询条件的患者就诊Id。
+</pre></div>
+</div>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_patient</span>
+  <span class="k">add</span> <span class="n">visit_set</span> <span class="nb">integer</span><span class="p">[];</span>      <span class="c1">-- 就诊Id</span>
+
+<span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_patient</span>
+    <span class="k">add</span> <span class="n">expire_time</span> <span class="k">timestamp</span><span class="p">;</span>     <span class="c1">-- 过期时间</span>
+
+<span class="k">alter</span> <span class="k">table</span> <span class="n">ir</span><span class="p">.</span><span class="n">cohort_patient</span>
+    <span class="k">add</span> <span class="n">disappear_time</span> <span class="k">timestamp</span><span class="p">;</span>    <span class="c1">-- 消失时间</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../systemconfig/index.html" class="btn btn-neutral float-right" title="系统配置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="数据库修改" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2019, synyi, bank.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

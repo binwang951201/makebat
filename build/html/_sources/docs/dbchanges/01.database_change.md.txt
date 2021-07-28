@@ -1,0 +1,87 @@
+# 在PC端科研助手基础上修改的内容
+
+## 移动端搜索
+  >* 添加搜索流水来源标识、移动端:1、PC端:0
+
+```sql
+  alter table ir.query_history add column source_type int default 0;
+```
+  >* 新建表[query_history_status]，记录搜索流水检索状态
+
+```sql
+create table ir.query_history_status
+(
+id bigint not null primary key default 0000,
+query_userid integer not null default 1,
+query_status integer not null default 0,
+begin_datetime timestamp default now(),
+finsh_datetime timestamp default now(),
+is_deleted boolean not null default false
+);
+
+comment on column ir.query_history_status.id is '搜索流水Id';
+
+comment on column ir.query_history_status.query_userid is '创建搜索流水用户Id';
+
+comment on column ir.query_history_status.query_status is '搜索流水执行状态';
+```
+
+## 移动端订阅来源 （source_type）
+
+    在ir.cohort_def 表中新增字段source_type 用于标识订阅来源  
+
+    移动端订阅来源状态,移动端订阅使用，0代表未定义，1代表从查询新增，2代表自定义新增，3代表从PC端同步
+
+```sql
+alter table ir.cohort_def
+  add source_type integer not null default 0;     
+```
+
+## 数据来源 （agent_type）
+
+    数据来源，移动端，PC端都使用，0代表未定义，1代表从PC端新增，2代表移动端新增
+
+```sql
+alter table ir.cohort_def
+  add agent_type integer not null default 1, 
+```   
+
+## 同步订阅来源 
+
+    同步订阅来源Id，当该条订阅是从PC端同步过来的时候，标识，从那条记录同步过来的
+
+```sql
+alter table ir.cohort_def
+  add ays_cohort_id integer;           
+```
+
+    移动端订阅执行频率，hangfire,cron 表达式
+
+```sql
+alter table ir.cohort_def
+  add mobile_query_frequency varchar(64);      
+```
+## 移动端执行频率
+
+    移动端订阅执行频率，hangfire,cron 表达式
+
+```sql
+alter table ir.cohort_def
+  add mobile_query_frequency varchar(64);      
+```
+## 过期时间
+
+    过期时间：当前时间大于过期时间之后，订阅中患者显示为“已过期；
+    消失时间:当前时间大于消失时间之后，患者信息就会从订阅患者列表中消失。
+    就诊Id: 保存符合订阅查询条件的患者就诊Id。
+
+```sql
+alter table ir.cohort_patient
+  add visit_set integer[];      -- 就诊Id
+
+alter table ir.cohort_patient
+    add expire_time timestamp;     -- 过期时间
+
+alter table ir.cohort_patient
+    add disappear_time timestamp;    -- 消失时间
+```
